@@ -1,0 +1,324 @@
+.campo-presentation{
+    text-align: center;
+    
+}
+
+.campo-presentation h1{
+    font-size: 60px;
+    font-family: Apple; 
+    color: #5a2d82;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(90,  45, 130, 0.5);
+}
+.campo-presentation p{
+    font-size: 35px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-weight: normal;
+    color: #6b6770;
+    margin-bottom: 50px;
+ }
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    background:
+    linear-gradient(135deg, #d8bce8, #f8eaf7, #cdb1e3);
+}
+
+.decoraciones{
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.sticker-envelope{
+    position: absolute;
+    width: 90px;
+    top: 30px;
+    right: 10%;
+    transform: rotate(8deg);
+    filter: drop-shadow(2px 4px 4px rgba(90, 45, 130, 0.2));
+}
+
+.section-tarjetas{
+    position: relative;
+}
+
+.sticker-stars{
+    position: absolute;
+    width: 75px;
+    top: -40px;
+    left: 8%; 
+}
+
+.sticker-moon{
+    position: absolute;
+    width: 80px;
+    top: 70px;
+    left: 10%;
+    transform: rotate(-12deg);
+}
+
+.sticker-flowers{
+    position: absolute;
+    width: 90px;
+    top: 500px; 
+    right: 8%;
+    transform: rotate(-6deg);
+}
+
+.sticker-cat{
+    position: absolute;
+    width: 80px;
+    top: 280px; 
+    right: 15%;
+    transform: rotate(5deg);  
+}
+
+.sticker-washi{
+    position: absolute;
+    width: 100px;
+    top: 280px;
+    left: 15%;
+    transform: rotate(-12deg);
+}
+
+.sticker-heart{
+    position: absolute;
+    width: 50px;
+    top: 70px;
+    left: 75%;
+    transform: rotate(12deg);
+}
+
+input{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #b58cc9;
+    width: 300px;
+    box-shadow: 0 3px 8px rgba(90, 45, 130, 0.12);
+}
+input:focus,
+textarea:focus{
+    outline: none;
+    border-color: #8e63a9;
+    box-shadow: 0 0 6px rgba(90, 45, 130, 0.3);
+}
+textarea{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #b58cc9;
+    width: 300px;
+    resize: vertical;
+    box-shadow: 0 3px 8px rgba(90, 45, 130, 0.12);
+}
+
+label{
+    display: block;
+}
+
+button{
+    font-size: 15px;
+    color: white;
+    background-color: #5a2d82;
+    width: 120px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid white;
+    transition: 0.2s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(90, 45, 130, 0.2);
+}
+button:hover{
+    background-color: #472066;
+}
+
+h2{
+    font-size: 32px;
+    color: #5a2d82;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+#tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tarjeta{
+    width: 250px;
+    text-align: center;
+    background-color: #f3eaf6;
+    border: 2px solid #c9a9d8;
+    border-radius: 12px;
+    min-height: 120px;
+    padding: 15px; 
+    box-shadow: 0 5px 12px rgba(90, 45, 130, 0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: aparecer 0.4s ease;
+}
+
+.tarjeta:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(90, 45, 130, 0.3);
+}
+
+.tarjeta h3{
+    color: #5b3883;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tarjeta p{
+    color: #6b6770;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.5; 
+    overflow-wrap: break-word;
+}
+
+#mensaje-alerta{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(90, 45, 130, 0.25);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.alerta-contenido{
+    width: 280px; 
+    padding: 25px; 
+    background-color: #f8eaf7;
+    border: 2px solid #c9a9d8;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(90, 45, 130, 0.25);
+    text-align: center;
+}
+
+.alerta-contenido h3{
+    color: #5a2d82;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.alerta-contenido p{
+    color: #6b6770;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#cerrar-alerta{
+    width: 120px; 
+    color: white;
+    background-color: #5a2d82;
+    border: none;
+    border-radius: 8px; 
+    padding: 7px;
+    cursor: pointer;
+}
+
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+}
+
+@keyframes aparecer-alerta{
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+    }
+    
+    .campo-presentation h1 {
+        font-size: 40px;
+    }
+
+    input,
+    textarea{
+        width: 100%;
+    }
+
+
+    .sticker-washi {
+    width: 70px;
+    top: 250px;
+    left: 2%;
+    }
+
+   .sticker-cat {
+    width: 60px;
+    top: 255px;
+    right: 3%;
+    }
+
+    .sticker-flowers {
+        width: 65px;
+        top: 590px;
+        right: 5%;
+    }
+
+    .sticker-stars {
+        width: 55px;
+        top: -80px;
+        left: -5%;
+    }
+
+    .sticker-moon {
+        display: block;
+        width: 45px;
+        top: 80px;
+        left: 3%;
+    }
+
+    .sticker-envelope {
+        display: block;
+        width: 46px;
+        top: 95px;
+        right: 3%;
+        rotate: 16deg;
+    }
+
+    .sticker-heart{
+        display: block;
+        width: 30px;
+        top: 50px;
+        left: auto;
+        right: 8%;
+    }
+
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width,initial-scale=1.0">
+  <title> Generador de tarjetas </title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="campo-presentation">
+      <h1> Generador de tarjetas </h1>
+      <p>Crea pequeñas tarjetas personalizadas</p>
+  </div>
+
+  <form>
+
+       <div class="campo-nombre">
+          <label for="nombre">Nombre:</label>
+          <input id="nombre" type="text" 
+           placeholder="Escribe un nombre...">
+       </div>
+
+       <div class="campo-frase">
+          <label for="frase">Frase:</label>
+          <textarea id="frase"
+          placeholder="Escribe una frase..."></textarea>
+       </div>
+
+     <button type="button"
+     id="boton"> Crear tarjeta </button>
+
+  </form>
+
+  <div class="section-tarjetas">
+
+      <h2>Mis tarjetas</h2>
+
+      <img src="images/stars.png"
+      class="sticker-stars">
+   
+      <div id="tarjetas">
+
+      </div>
+
+  </div>
+
+  <div class="decoraciones">
+
+      <img src="images/envelope.png"
+      class="sticker-envelope">
+
+      <img src="images/moon.png"
+      class="sticker-moon">
+     
+      <img src="images/flowers.png"
+      class="sticker-flowers">
+
+      <img src="images/cat.png"
+      class="sticker-cat">
+     
+      <img src="images/washi-tape.png"
+      class="sticker-washi"> 
+
+      <img src="images/heart.png"
+      class="sticker-heart">
+
+  </div>
+
+  <div id="mensaje-alerta">
+    <div class="alerta-contenido">
+        <h3>Oops...</h3>
+        <p>Completa todos los campos antes de crear tu tarjeta.</p>
+        <button id="cerrar-alerta" type="button">Entendido ❤︎</button>
+    </div>
+  </div>
+
+ <script src="script.js"></script>
+
+</body>
+</html>
