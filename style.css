@@ -51,7 +51,7 @@ body{
 .sticker-stars{
     position: absolute;
     width: 75px;
-    top: -40px;
+    top: 480px;
     left: 8%; 
 }
 
@@ -192,19 +192,98 @@ h2{
     overflow-wrap: break-word;
 }
 
-#selector-estilos{
-    display: none;
-    position: relative;
-    margin: 15px auto;
-    width: 250px;
-    padding: 15px;
-    border-radius: 15px;
-    background: #ffffff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+.emblema-tarjeta{
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0 auto 8px;
 }
 
-#boton-estilo{
-    margin-top: 15px;
+.tarjeta.dreamy{
+    background: 
+    radial-gradient(circle at 20% 25%, rgba(255, 255, 255, 0.7) 2px, transparent 3px),
+    radial-gradient(circle at 75% 65%, rgba(255, 255, 255, 0.6) 2px, transparent 3px),
+    linear-gradient(135deg, #d8bce8, #f8eaf7);
+    border: 2px solid #c7a5d9;
+    box-shadow: 0 5px 15px rgba(90, 45, 130, 0.15);
+}
+
+.tarjeta.dreamy h3{
+    color: #5a2d82;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+
+.tarjeta.dreamy p{
+    color: #6b4b78;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+}
+
+.tarjeta.night{
+    background: 
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.8) 1px, transparent 2px),
+    radial-gradient(circle at 85% 25%, rgba(255, 255, 255, 0.6) 1px, transparent 2px),
+    radial-gradient(circle at 10% 75%, rgba(255, 255, 255, 0.5) 1px, transparent 2px),
+    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.7) 1px, transparent 2px),
+    linear-gradient(135deg, #25204a, #51458a);
+    border: 2px solid #7065a8;
+    box-shadow: 0 5px 15px rgba(37, 32, 74, 0.3);
+}
+
+.tarjeta.night h3 {
+    color: #f4e9a8;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+}
+
+.tarjeta.night p {
+    color: #e4def5;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+}
+
+.tarjeta.floral {
+    background: 
+    linear-gradient(135deg, #f6dce8, #e8f0d8);
+    border: 2px solid #e1c3d1;
+    box-shadow: 0 5px 15px rgba(120, 130, 90, 0.18);
+}
+
+.tarjeta.floral h3 {
+    color: #8f536f;
+    font-family: "Lora", serif;
+    font-weight: 600;
+}
+
+.tarjeta.floral p {
+    color: #657052;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+}
+
+.tarjeta.love-letter {
+    background: 
+    linear-gradient(
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.18) 
+    ),
+    linear-gradient(135deg, #f8e4d5, #f5c9d8);
+    border: 2px solid #d9aebc;
+    box-shadow: 0 5px 15px rgba(150, 90, 100, 0.18);
+}
+
+.tarjeta.love-letter h3 {
+    color: #8f5365;
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+}
+
+.tarjeta.love-letter p {
+    color: #765765;
+    font-family: "Lora", serif;
+    font-weight: 400;
 }
 
 #mensaje-alerta{
@@ -303,15 +382,16 @@ h2{
     }
 
     .sticker-flowers {
-        width: 65px;
-        top: 590px;
+        width: 57px;
+        top: 645px;
         right: 5%;
     }
 
     .sticker-stars {
-        width: 55px;
-        top: -80px;
-        left: -5%;
+        width: 45px;
+        top: 640px;
+        left: 5%;
+        transform: rotate(-2deg)
     }
 
     .sticker-moon {
@@ -338,3 +418,142 @@ h2{
     }
 
 }
+
+#selector-estilos{
+    display: none;
+    position: relative;
+    margin: 15px auto;
+    width: 250px;
+    padding: 15px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+#boton-estilo{
+    margin-top: 15px;
+}
+
+.opcion-estilo{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #f3e4f5;
+    color: #5a2d82;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.opcion-estilo:hover{
+    background: #e5cfee;
+    transform: translateX(4px);
+}
+
+.preview-estilo{
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    right: -115px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.opcion-estilo:hover .preview-estilo{
+    display: block;
+}
+
+.preview-dreamy{
+    background:
+    radial-gradient(circle at 20% 25%, rgba(255, 255, 255, 0.7) 2px, transparent 3px),
+    radial-gradient(circle at 75% 65%, rgba(255, 255, 255, 0.6) 2px, transparent 3px), 
+    linear-gradient(135deg, #d8bce8, #f8eaf7);
+
+    border: 2px solid #c7a5d9;
+    box-shadow: 0 4px 10px rgba(90, 45, 130, 0.15);
+}
+
+.preview-dreamy::before{
+    content: "✿";
+    display: block;
+    width: 22px;
+    height: 22px; 
+    margin: 5px auto 0;
+
+    color: #8b5aa8;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.preview-night{
+    background:
+    radial-gradient(circle at 25% 30%, rgba(255, 255, 255, 0.7) 1px, transparent 2px),
+    radial-gradient(circle at 75% 65%, rgba(255, 255, 255, 0.5) 1px, transparent 2px),
+    linear-gradient(135deg, #25204a, #51458a);
+
+    border: 2px solid #7065a8;
+    box-shadow: 0 4px 10px rgba(37, 32, 74, 0.3);
+}
+
+.preview-night::before{
+    content: "☾";
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 5px auto 0;
+
+    color: #f4e9a8;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.preview-floral{
+    background:
+    radial-gradient(circle at 20% 70%, rgba(255, 255, 255, 0.6) 2px, transparent 3px),
+    radial-gradient(circle at 80% 25%, rgba(255, 255, 255, 0.6) 2px, transparent 3px),
+    linear-gradient(135deg, #f6dce8, #e8f0d8);
+
+    border: 2px solid #e1c3d1;
+    box-shadow: 0 4px 10px rgba(120, 130, 90, 0.18);
+}
+
+.preview-floral::before{
+     content: "🌷";
+     display: block;
+     width: 22px;
+     height: 22px;
+     margin: 5px auto 0;
+
+     font-size: 17px;
+     line-height: 22px;
+}
+
+.preview-love{
+    background: 
+    radial-gradient(circle at 25% 30%, rgba(255, 255, 255, 0.6) 2px, transparent 3px),
+    radial-gradient(circle at 75% 70%, rgba(255, 255, 255, 0.5) 2px, transparent 3px),
+    linear-gradient(135deg, #f8e4d5, #f5c9d8);
+
+    border: 2px solid #d9aebc;
+    box-shadow: 0 4px 10px rgba(150, 90, 100, 0.18);
+}
+
+.preview-love::before{
+    content: "💌";
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 5px auto 0;
+
+    font-size: 17px;
+    line-height: 22px;
+}
+

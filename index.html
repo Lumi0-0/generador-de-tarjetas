@@ -5,6 +5,12 @@
   <meta name="viewport"
   content="width=device-width,initial-scale=1.0">
   <title> Generador de tarjetas </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -36,20 +42,24 @@
 
      <div id="selector-estilos">
       
-      <button type="button" class="opcion-estilo">
-        ✨ Dreamy
+      <button type="button" class="opcion-estilo" data-estilo="dreamy">
+        <span>✨ Dreamy</span>
+        <div class="preview-estilo preview-dreamy"></div>
       </button>
 
-      <button type="button" class="opcion-estilo">
-        🌙 Night
+      <button type="button" class="opcion-estilo" data-estilo="night">
+        <span>🌙 Night</span>
+        <div class="preview-estilo preview-night"></div>
       </button>
 
-      <button type="button" class="opcion-estilo">
-        🌷 Floral
+      <button type="button" class="opcion-estilo" data-estilo="floral">
+        <span>🌷 Floral</span>
+        <div class="preview-estilo preview-floral"></div>
       </button>
 
-      <button type="button" class="opcion-estilo">
-        💌 Love letter
+      <button type="button" class="opcion-estilo" data-estilo="love-letter">
+        <span>💌 Love letter</span>
+        <div class="preview-estilo preview-love"></div>
       </button>
 
      </div>
@@ -60,8 +70,6 @@
 
       <h2>Mis tarjetas</h2>
 
-      <img src="images/stars.png"
-      class="sticker-stars">
    
       <div id="tarjetas">
 
@@ -73,6 +81,9 @@
 
       <img src="images/envelope.png"
       class="sticker-envelope">
+
+      <img src="images/stars.png"
+      class="sticker-stars">
 
       <img src="images/moon.png"
       class="sticker-moon">
