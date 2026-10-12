@@ -35,6 +35,10 @@ body{
     pointer-events: none;
 }
 
+.section-tarjetas{
+    position: relative;
+} 
+
 .sticker-envelope{
     position: absolute;
     width: 90px;
@@ -42,10 +46,6 @@ body{
     right: 10%;
     transform: rotate(8deg);
     filter: drop-shadow(2px 4px 4px rgba(90, 45, 130, 0.2));
-}
-
-.section-tarjetas{
-    position: relative;
 }
 
 .sticker-stars{
@@ -383,13 +383,13 @@ h2{
 
     .sticker-flowers {
         width: 57px;
-        top: 645px;
+        top: 600px;
         right: 5%;
     }
 
     .sticker-stars {
         width: 45px;
-        top: 640px;
+        top: 600px;
         left: 5%;
         transform: rotate(-2deg)
     }
@@ -557,3 +557,45 @@ h2{
     line-height: 22px;
 }
 
+
+.sticker-flowers-movil,
+.sticker-stars-movil{
+display: none;
+}
+
+@media (max-width: 600px) {
+    .titulo-tarjetas{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .titulo-tarjetas h2{
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+
+    .sticker-flowers-movil,
+    .sticker-stars-movil{
+        display: block;
+        position: absolute;
+        width: 48px;
+        height: auto;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .sticker-flowers-movil{
+        right: 2%;
+    }
+
+    .sticker-stars-movil{
+        left: 2%;
+    }
+    
+    .decoraciones .sticker-flowers,
+    .decoraciones .sticker-stars{
+        display: none;
+    }
+}
